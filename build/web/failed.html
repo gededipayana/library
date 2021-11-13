@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>Perpustakaan SMKN 1 Sedayu</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="body.css">
+    <div class="nav">
+	 <ul>
+		<li><div class="logo"></div>
+		<li><a href="#">Perpustakaan SMKN 1 Sedayu</a></li>
+	</ul>
+    </div>
+</head>
+<body>
+
+<div class="konten">
+        <div class="kepala">
+            <div class="lock"></div>
+            <h2 class="judul">Sign In</h2>
+        </div>
+		<div class="peringatan">
+            <center><h3 class="judul">Invalid login, please try again</h3></center>
+        </div>
+        <div class="artikel">
+            <form action="./login" method="post">
+                <div class="grup">
+                    <label for="email">Username / ID</label>
+                    <input type="text" placeholder="Masukkan Username / ID Anda" name='username'>
+                </div>
+                <div class="grup">
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Masukkan Password Anda" name='password'>
+                </div>
+                <div class="grup">
+                    <input type="submit" value="Sign In">
+                </div>
+            </form>
+			
+        </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Perpustakaan SMKN 1 Sedayu</title>
+        <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
+        <link rel="stylesheet" href="../dist/css/skins/skin-yellow.min.css">
+        <link rel="stylesheet" href="../resources/initializr/css/bootstrap.css">
+        <link rel="stylesheet" href="../resources/initializr/css/bootstrap-theme.css">
+        <script src="../resources/jquery/js/jquery-1.12.4.min.js"></script>
+        <script src="../resources/lightbox/js/prototype.js"></script>
+        <script src="../resources/lightbox/js/scriptaculous.js?load=effects"></script>
+        <script src="../resources/select2/select2.min.js"></script>
+        <script src="../resources/timepicker/bootstrap-timepicker.min.js"></script>
+        <script src="../resources/jscookie/js.cookie.js"></script>
+        <script src="../resources/datepicker/js/datepicker.packed.js"></script>
+        <script src="../common.js.php"></script>
+
+    </head>
+    <body class="hold-transition skin-yellow sidebar-mini">
+        <div class="wrapper">
+            <!-- HEADER -->
+            <header class="main-header">
+                <a href="index.html" class="logo">
+                    <span class="logo-mini">Menu</span>
+                    <span class="logo-lg"><b>Admin Panel</b></span>
+                </a>
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    </a>
+                </nav>
+            </header>
+
+            <!-- Slide Kanan -->
+            <aside class="main-sidebar">
+                <section class="sidebar"><br>
+                    <div class="user-panel">
+                        <div class="pull-left image">
+                            <img src="../dist/img/ic10.png" class="img-circle" alt="User Image">
+                        </div>
+                        <div class="pull-left info">
+                            <strong><a href="index.html" class="text-success">admin</a></strong>
+                            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                        </div>
+                    </div>
+
+                    <ul class="sidebar-menu" data-widget="tree">
+                        <li class="header"></li>
+                        <li class="active">
+                            <a href="index.html"><i class="fa fa-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="treeview">
+                            <a href="#"><i class="fa fa-users"></i> <span>Member</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="lihatmember.html">Lihat Member</a></li>
+                                <li><a href="tambahmember.html">Tambah Member</a></li>
+                                <li><a href="editmember.html">Edit Member</a></li>
+                                <li><a href="hapusmember.html">Hapus Member</a></li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#"><i class="fa fa-book"></i> 
+                                <span>Buku</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="lihatbuku.html">Lihat Buku</a></li>
+                                <li><a href="tambahbuku.html">Tambah Buku</a></li>
+                                <li><a href="editbuku.html">Edit Buku</a></li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#"><i class="fa fa-newspaper-o"></i> <span>Transaksi</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="lihattransaksi.html">Lihat Transaksi</a></li>
+                                <li><a href="peminjamanlangsung.html">Peminjaman Langsung</a></li>
+                                <li><a href="validasipemesanan.html">Validasi Pemesanan</a></li>
+                                <li><a href="pengembalianbuku.html">Pengembalian Buku</a></li>
+                                <li><a href="pembatalanpesanan.html">Pembatalan Pesanan</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../logout">
+                                <i class="glyphicon glyphicon-log-out"></i> <span>Keluar</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </aside>
+
+            <!-- Isi -->
+            <div class="content-wrapper">
+                <br>
+                <section class="content-header">
+                    <ol class="breadcrumb">
+                        <li><a href="index.html"><i class="fa fa-dashboard"></i>Admin</a></li>
+                        <li class="active">tambahmember</li>
+                    </ol>
+                </section>
+                <script src="../dist/js/adminlte.min.js"></script>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <form method="post" name="myform" action="./tambahmember.html">
+                            <div class="page-header">
+                                <h1><a style="text-decoration: none; color: inherit;" href="tambahmember.html"><img src="../resources/table_icons/group.png"> Tambah Member</a></h1>
+                            </div>
+                            <div class="col-xs-12 detail_view ">
+                                <div class="panel panel-default">
+                                    <a name="detail-view"></a>
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title"><strong>Detail Member</strong></h3>
+                                    </div>
+                                    <div class="panel-body" id="Users_dv_container">
+                                        <div class="row">
+                                            <div class="col-md-8 col-lg-10" id="Users_dv_form">
+                                                <fieldset class="form-horizontal">
+                                                    <div class="form-group">
+                                                        <hr class="hidden-md hidden-lg">
+                                                        <label for="Membership_Number" class="control-label col-lg-3">ID Member</label>
+                                                        <div class="col-lg-9">
+                                                            <input maxlength="40" type="text" class="form-control" name="iduser" id="Membership_Number" value="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <hr class="hidden-md hidden-lg">
+                                                        <label for="Name" class="control-label col-lg-3">Username</label>
+                                                        <div class="col-lg-9">
+                                                            <input maxlength="140" type="text" class="form-control" name="username" id="Name" value="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <hr class="hidden-md hidden-lg">
+                                                        <label for="Name" class="control-label col-lg-3">Password</label>
+                                                        <div class="col-lg-9">
+                                                            <input maxlength="140" type="text" class="form-control" name="pass" id="Name" value="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <hr class="hidden-md hidden-lg">
+                                                        <label for="Name" class="control-label col-lg-3">Nama</label>
+                                                        <div class="col-lg-9">
+                                                            <input maxlength="140" type="text" class="form-control" name="nama" id="Name" value="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <hr class="hidden-md hidden-lg">
+                                                        <label for="Contact" class="control-label col-lg-3">Alamat</label>
+                                                        <div class="col-lg-9">
+                                                            <input maxlength="40" type="text" class="form-control" name="alamat" id="Contact" value="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <hr class="hidden-md hidden-lg">
+                                                        <label for="Contact" class="control-label col-lg-3">Email</label>
+                                                        <div class="col-lg-9">
+                                                            <input maxlength="40" type="text" class="form-control" name="email" id="Contact" value="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <hr class="hidden-md hidden-lg">
+                                                        <label for="Contact" class="control-label col-lg-3">No Telp</label>
+                                                        <div class="col-lg-9">
+                                                            <input maxlength="40" type="text" class="form-control" name="notelp" id="Contact" value="">
+                                                        </div>
+                                                    </div>
+
+
+
+                                                    <div class="form-group">
+                                                        <hr class="hidden-md hidden-lg">
+                                                        <label for="Purchase_Date" class="control-label col-lg-3">Status</label>
+                                                        <div class="col-lg-9">
+                                                            <table style="width: 100%;"><tr><td style="width: calc(50% - 4em);" class="date_combo"><select name="status" id="Purchase_Date-mm" class="form-control" style="">
+                                                                            <option value="">&nbsp;</option>
+                                                                            <option value="ADMIN">ADMIN</option>
+                                                                            <option value="STAFF">STAFF</option>
+                                                                            <option value="PEMINJAM">PEMINJAM</option>
+                                                                </tr></table>
+                                                        </div>
+                                                    </div>
+
+
+                                                </fieldset>
+                                            </div>
+                                            <div class="col-md-4 col-lg-2" id="Users_dv_action_buttons">
+                                                <div class="btn-toolbar">
+                                                    <div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+                                                        <button type="reset" class="btn btn-default" id="deselect" name="deselect_x" value="Reset">
+                                                            <i class="glyphicon glyphicon-chevron-left"></i> Bersihkan</button>
+                                                    </div>
+                                                    <p></p>
+                                                    <div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+                                                        <button type="submit" class="btn btn-success" id="insert" name="insert_x" value="1" onclick="return confirm('Apakah anda yakin ingin menambahkan data ini?');"><i class="glyphicon glyphicon-plus-sign"></i> Simpan</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

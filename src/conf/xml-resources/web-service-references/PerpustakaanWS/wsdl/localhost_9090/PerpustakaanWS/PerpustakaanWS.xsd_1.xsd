@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://perpus.ws/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://perpus.ws/">
+
+<xs:element name="getTanggal" type="tns:getTanggal"/>
+
+<xs:element name="getTanggalHome" type="tns:getTanggalHome"/>
+
+<xs:element name="getTanggalHomeResponse" type="tns:getTanggalHomeResponse"/>
+
+<xs:element name="getTanggalKembaliSQL" type="tns:getTanggalKembaliSQL"/>
+
+<xs:element name="getTanggalKembaliSQLResponse" type="tns:getTanggalKembaliSQLResponse"/>
+
+<xs:element name="getTanggalResponse" type="tns:getTanggalResponse"/>
+
+<xs:element name="getTanggalSQL" type="tns:getTanggalSQL"/>
+
+<xs:element name="getTanggalSQLResponse" type="tns:getTanggalSQLResponse"/>
+
+<xs:element name="getWaktu" type="tns:getWaktu"/>
+
+<xs:element name="getWaktuResponse" type="tns:getWaktuResponse"/>
+
+<xs:complexType name="getWaktu">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getWaktuResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTanggal">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getTanggalResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTanggalKembaliSQL">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getTanggalKembaliSQLResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTanggalSQL">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getTanggalSQLResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTanggalHome">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getTanggalHomeResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

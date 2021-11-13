@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Perpustakaan SMKN 1 Sedayu</title>
+        <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
+        <link rel="stylesheet" href="../dist/css/skins/skin-yellow.min.css">
+        <link rel="stylesheet" href="../resources/initializr/css/bootstrap.css">
+        <link rel="stylesheet" href="../resources/initializr/css/bootstrap-theme.css">
+        <script src="../resources/jquery/js/jquery-1.12.4.min.js"></script>
+        <script src="../resources/lightbox/js/prototype.js"></script>
+        <script src="../resources/lightbox/js/scriptaculous.js?load=effects"></script>
+        <script src="../resources/select2/select2.min.js"></script>
+        <script src="../resources/timepicker/bootstrap-timepicker.min.js"></script>
+        <script src="../resources/jscookie/js.cookie.js"></script>
+        <script src="../resources/datepicker/js/datepicker.packed.js"></script>
+        <script src="../common.js.php"></script>
+    </head>
+    <body class="hold-transition skin-yellow sidebar-mini">
+        <div class="wrapper">
+            <!-- HEADER -->
+            <header class="main-header">
+                <a href="index.html" class="logo">
+                    <span class="logo-mini">Menu</span>
+                    <span class="logo-lg"><b>Pemimjam Panel</b></span>
+                </a>
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    </a>
+                </nav>
+            </header>
+
+            <!-- Slide Kanan -->
+            <aside class="main-sidebar">
+                <section class="sidebar"><br>
+                    <div class="user-panel">
+                        <div class="pull-left image">
+                            <img src="../dist/img/ic10.png" class="img-circle" alt="User Image">
+                        </div>
+                        <div class="pull-left info">
+                            <strong><a href="index.html" class="text-success">peminjam</a></strong>
+                            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                        </div>
+                    </div>
+
+                    <ul class="sidebar-menu" data-widget="tree">
+                        <li class="header"></li>
+                        <li class="active">
+                            <a href="index.html"><i class="fa fa-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="treeview">
+                            <a href="#"><i class="fa fa-users"></i> <span>Member</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="editmember.html">Edit Member</a></li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#"><i class="fa fa-newspaper-o"></i> <span>Transaksi</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="lihattransaksi.html">Lihat Transaksi</a></li>
+                                <li><a href="pemesanan.html">Pemesanan</a></li>
+                                <li><a href="pembatalanpesanan.html">Pembatalan Pesanan</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../logout">
+                                <i class="glyphicon glyphicon-log-out"></i> <span>Keluar</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </aside>
+
+            <!-- Isi -->
+            <div class="content-wrapper"><br>
+                <section class="content-header">
+                    <ol class="breadcrumb">
+                        <li><a href="index.html"><i class="fa fa-dashboard"></i>Pemimjam</a></li>
+                        <li class="active">Cari</li>
+                        <li class="active">Hasil Pencarian</li>
+                    </ol>
+                </section>
+                <!-- Scroll -->
+                <script src="../dist/js/adminlte.min.js"></script>
+                <div class="row">
+                    <link rel="stylesheet" href="../text.css">
+                    <div class="col-xs-12">
+                        <h1>
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <br><h3>   Cari</h3>
+                                </div>
+                                <form method="post" action="#">
+                                    <div class="col-sm-5">		
+                                        <div class="input-group" id="quick-search">
+                                            <input type="text" id="SearchString" name="katakuncipemesanan" value="" class="form-control" placeholder="Cari Buku / Penerbit / Pengarang">
+                                            <span class="input-group-btn">
+                                                <button name="Search_x" value="1" id="Search" type="submit" onClick="#" class="btn btn-default" title="Cari"><i class="glyphicon glyphicon-search"></i></button>
+                                            </span>
+                                        </div>			
+                                    </div>
+                                </form>
+                        </h1>
+                    </div>
+                </div>
+                <div id="top_buttons" class="hidden-print">
+                    <div class="row"><br><br><br><br>
+                        <div class="table_view col-xs-12 ">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>ID Buku</th>
+                                            <th>Judul Buku</th>
+                                            <th>Penerbit</th>
+                                            <th>Pengarang</th>
+                                            <th>Tahun Terbit</th>
+                                            <th>Kategori</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                    <style> 
+                                        input[type=text] {
+                                            border: none;
+                                            background-color:#f9f9f9;
+                                        }
+                                    </style>
+                                    <form action="get.php" method="get">
+                                        <td><input name ="idbuku" type="text" value="" readonly></td>
+                                        <td><input name ="judulbuku" type="text" value="" readonly></td>
+                                        <td><input name ="penerbit" type="text" value="" readonly></td>
+                                        <td><input name ="pengarang" type="text" value="" readonly></td>
+                                        <td><input name ="tahunterbit" type="text" value="" readonly></td>
+                                        <td><input name ="kategori" type="text" value="" readonly></td>
+                                        <td><input type="submit" value="Pesan"></td>
+                                    </form>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+
+</html>

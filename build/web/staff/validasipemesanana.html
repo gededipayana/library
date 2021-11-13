@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Perpustakaan SMKN 1 Sedayu</title>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="../dist/css/skins/skin-yellow.min.css">
+    <link rel="stylesheet" href="../resources/initializr/css/bootstrap.css">
+    <link rel="stylesheet" href="../resources/initializr/css/bootstrap-theme.css">
+    <script src="../resources/jquery/js/jquery-1.12.4.min.js"></script>
+    <script src="../resources/lightbox/js/prototype.js"></script>
+    <script src="../resources/lightbox/js/scriptaculous.js?load=effects"></script>
+    <script src="../resources/select2/select2.min.js"></script>
+    <script src="../resources/timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="../resources/jscookie/js.cookie.js"></script>
+    <script src="../resources/datepicker/js/datepicker.packed.js"></script>
+    <script src="../common.js.php"></script>
+</head>
+<body class="hold-transition skin-yellow sidebar-mini">
+    <div class="wrapper">
+		<!-- HEADER -->
+        <header class="main-header">
+            <a href="index.html" class="logo">
+                <span class="logo-mini">Menu</span>
+                <span class="logo-lg"><b>Staff Panel</b></span>
+            </a>
+            <nav class="navbar navbar-static-top" role="navigation">
+                <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                </a>
+            </nav>
+        </header>
+		
+		<!-- Slide Kanan -->
+        <aside class="main-sidebar">
+            <section class="sidebar"><br>
+                <div class="user-panel">
+                    <div class="pull-left image">
+                        <img src="../dist/img/ic10.png" class="img-circle" alt="User Image">
+                    </div>
+                    <div class="pull-left info">
+                        <strong><a href="index.html" class="text-success">staff</a></strong>
+                        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                    </div>
+                </div>
+
+                <ul class="sidebar-menu" data-widget="tree">
+                    <li class="header"></li>
+                    <li class="active">
+						<a href="index.html"><i class="fa fa-dashboard"></i>
+						<span>Dashboard</span>
+						</a>
+					</li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-users"></i> <span>Member</span>
+						<span class="pull-right-container">
+							<i class="fa fa-angle-left pull-right"></i>
+						</span>
+						</a>
+                        <ul class="treeview-menu">
+                            <li><a href="lihatmember.html">Lihat Member</a></li>
+							<li><a href="editmember.html">Edit Member</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-book"></i> 
+						<span>Buku</span>
+						<span class="pull-right-container">
+							<i class="fa fa-angle-left pull-right"></i>
+						</span>
+						</a>
+                        <ul class="treeview-menu">
+                            <li><a href="lihatbuku.html">Lihat Buku</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-newspaper-o"></i> <span>Transaksi</span>
+						<span class="pull-right-container">
+							<i class="fa fa-angle-left pull-right"></i>
+						</span>
+						</a>
+                        <ul class="treeview-menu">
+							<li><a href="lihattransaksi.html">Lihat Transaksi</a></li>
+                            <li><a href="peminjamanlangsung.html">Peminjaman Langsung</a></li>
+                            <li><a href="validasipemesanan.html">Validasi Pemesanan</a></li>
+                            <li><a href="pengembalianbuku.html">Pengembalian Buku</a></li>
+							<li><a href="pembatalanpesanan.html">Pembatalan Pesanan</a></li>
+                        </ul>
+                    </li>
+                    <li>
+						<a href="#">
+						<i class="glyphicon glyphicon-log-out"></i> <span>Keluar</span>
+						</a>
+					</li>
+                </ul>
+            </section>
+        </aside>
+		
+		<!-- Isi -->
+        <div class="content-wrapper"><br>
+            <section class="content-header">
+                <ol class="breadcrumb">
+                    <li><a href="index.html"><i class="fa fa-dashboard"></i>Staff</a></li>
+                    <li class="active">validasipemesanan</li>
+                </ol>
+            </section>
+			<!-- Scroll -->
+			<script src="../dist/js/adminlte.min.js"></script>
+            <div class="row">
+				<div class="col-xs-12">
+					<div class="page-header">
+						<!-- Judul -->
+						<h1>
+							<div class="col-sm-8">
+							<div class="row"><div class="col-sm-8"><a style="text-decoration: none; color: inherit;" href="index.html">
+								<img src="../resources/table_icons/blogs.png"> Validasi Pemesanan</a></div>
+								<div class="col-sm-8">
+									<br><h3>ID Pemesanan</h3>
+								</div>
+								<div class="col-sm-5">	
+									<form method="post" action="./validasipemesanan.html">								
+									<div class="input-group" id="quick-search">
+										<input type="text" id="SearchString" name="katakunci" value="" class="form-control" placeholder="Cari ID Pemesanan">
+											<span class="input-group-btn">
+												<button name="Search_x" value="1" id="Search" type="submit" onClick="#" class="btn btn-default" title="Quick Search"><i class="glyphicon glyphicon-search"></i></button>
+											</span>
+									</div>	
+									</form>
+								</div>
+						</h1>
+							</div>
+							</div>
+							<span><br></span>
+						<form method="post" action="../StaffValidasiPemesananSimpan">
+						<div class="col-sm-12">		
+						<div class="col-xs-12 detail_view ">
+                            <div class="panel panel-default">
+                                <a name="detail-view"></a>
+                                <div class="panel-heading">
+                                    <h3 class="panel-title"><strong>Detail Pemesanan</strong></h3>
+								</div>
+                                <div class="panel-body" id="Users_dv_container">
+                                    <div class="row">
+                                        <div class="col-md-8 col-lg-10" id="Users_dv_form">
+                                            <fieldset class="form-horizontal">
+                                                <div class="form-group">
+                                                    <hr class="hidden-md hidden-lg">
+                                                    <label for="Membership_Number" class="control-label col-lg-3">ID Pemesanan</label>
+                                                    <div class="col-lg-9">
+                                                        <input maxlength="40" type="text" class="form-control" name="idpemesanan" id="Membership_Number" value="" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <hr class="hidden-md hidden-lg">
+                                                    <label for="Name" class="control-label col-lg-3">ID Peminjam</label>
+                                                    <div class="col-lg-9">
+                                                        <input maxlength="140" type="text" class="form-control" name="idpeminjam" id="Name" value="" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <hr class="hidden-md hidden-lg">
+                                                    <label for="Contact" class="control-label col-lg-3">ID Buku</label>
+                                                    <div class="col-lg-9">
+                                                        <input maxlength="40" type="text" class="form-control" name="idbuku" id="Contact" value="" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <hr class="hidden-md hidden-lg">
+                                                    <label for="Contact" class="control-label col-lg-3">Tanggal Pesan</label>
+                                                    <div class="col-lg-9">
+                                                        <input maxlength="40" type="text" class="form-control" name="tglpesan" id="Contact" value="" readonly>
+                                                    </div>
+                                                </div>                                                
+                                            </fieldset>
+                                        </div>
+                                        <hr class="hidden-md hidden-lg">
+                                        <div class="col-md-4 col-lg-2" id="Users_dv_action_buttons">
+                                            <div class="btn-toolbar">
+												<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+                                                    <button type="submit" class="btn btn-success" id="insert" name="insert_x" value="1" onclick="return Users_validateData();"><i class="glyphicon glyphicon-plus-sign"></i> Konfirmasi</button>
+                                                </div>
+												<p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>	
+					</div>
+					</form>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
